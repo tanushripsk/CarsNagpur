@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "zip-carsNagpur"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "zip-carsNagpur-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
