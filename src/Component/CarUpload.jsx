@@ -97,7 +97,7 @@ const CarUpload = () => {
         }
       });
 
-      const response = await fetch('http://3.108.65.14:3000/api/cars/newCar', {
+      const response = await fetch('http://15.207.221.104 :3000/api/cars/newCar', {
         method: 'POST',
         body: form,
       });
