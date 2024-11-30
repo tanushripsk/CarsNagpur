@@ -16,7 +16,7 @@ connectDB();
 
 // Enable CORS and allow requests from your React app's origin
 // const allowedOrigins = ['http://65.0.32.220:3001', 'http://65.0.32.220:5173']; // Add more origins if needed
-const allowedOrigins = ['http://13.235.69.178:3001']; // Add more origins if needed
+const allowedOrigins = ['http://3.111.58.199:3001']; // Add more origins if needed
 
 app.use(cors({
     origin: function (origin, callback) {
@@ -32,7 +32,8 @@ app.use(cors({
 
 // Middleware to parse JSON
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../build")));
+app.use(cors());                //tanushri edit
+app.use(express.static(path.join(__dirname, "../build")));    //tanushri edit
 // Use routes
 app.use('/api/users', userRoutes);
 app.use('/api/cars', carsRoutes);
@@ -41,7 +42,7 @@ app.use('/api/testDrive', TestDriveRoutes)
 
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
+    res.sendFile(path.join(__dirname, "../build", "index.html"));    //tanushri edit
   });
 
 
