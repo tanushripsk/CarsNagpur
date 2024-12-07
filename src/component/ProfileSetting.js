@@ -13,7 +13,7 @@ function ProfileSetting() {
   async function fetchUserDetails() {
     setIsLoading(true);
     try {
-      const response = await fetch("http://13.201.104.41:3000/api/users/user-detail", {
+      const response = await fetch("http://13.126.58.142:3000/api/users/user-detail", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -88,7 +88,7 @@ function ProfileSetting() {
         formData.append("profilePicture", profilePicture);
       }
 
-      const response = await fetch(`http://52.66.244.187:3000/api/users/update/${user._id}`, {
+      const response = await fetch(`http://13.126.58.142:3000/api/users/update/${user._id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
