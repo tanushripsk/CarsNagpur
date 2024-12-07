@@ -4,7 +4,7 @@ import { FaHeart, FaMapMarkerAlt, FaCar, FaGasPump, FaUser, FaChevronRight, FaSe
 import { Link } from 'react-router-dom';
 
 function fetchCartData() {
-  return fetch('http://13.201.104.41:3000/api/cart', {
+  return fetch('http://52.66.244.187:3000/api/cart', {
     method: 'GET',
     credentials: 'include',
     headers: {
@@ -26,7 +26,7 @@ function fetchCartData() {
 }
 
 function handleRemoveFromCart(carId, setCartItems) {
-  return fetch(`http://13.201.104.41:3000/api/cart/remove/${carId}`, {
+  return fetch(`http://52.66.244.187:3000/api/cart/remove/${carId}`, {
     method: 'DELETE',
     credentials: 'include',
     headers: {

@@ -28,7 +28,7 @@ function TestDetails() {
           throw new Error("No authentication token found");
         }
 
-        const response = await fetch(`http://13.201.104.41:3000/api/testDrive/get/${id}`, {
+        const response = await fetch(`http://52.66.244.187:3000/api/testDrive/get/${id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -67,7 +67,7 @@ function TestDetails() {
       }
 
       const carIdString = typeof carId === "object" ? carId.$oid : carId;
-      const url = `http://13.201.104.41:3000/api/cars/cars/${carIdString}`;
+      const url = `http://52.66.244.187:3000/api/cars/cars/${carIdString}`;
       console.log("Fetching car data from:", url);
 
       try {
@@ -168,7 +168,7 @@ function TestDetails() {
 
   async function handleCancel() {
     try {
-      const response = await fetch(`http://13.201.104.41:3000/api/testDrive/${id}/cancel`, {
+      const response = await fetch(`http://52.66.244.187:3000/api/testDrive/${id}/cancel`, {
         method: 'PATCH',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -217,7 +217,7 @@ function TestDetails() {
 
   async function handleUpdate() {
     try {
-      const response = await fetch(`http://13.201.104.41:3000/api/testDrive/update/${id}`, {
+      const response = await fetch(`http://52.66.244.187:3000/api/testDrive/update/${id}`, {
         method: 'PATCH',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,

@@ -31,7 +31,7 @@ function Signup() {
     setError('');
 
     try {
-      const response = await fetch('http://13.201.104.41:3000/api/users/signup', {
+      const response = await fetch('http://52.66.244.187:3000/api/users/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
